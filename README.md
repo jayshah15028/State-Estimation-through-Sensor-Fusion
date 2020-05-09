@@ -1,9 +1,12 @@
 # State-Estimation-through-Sensor-Fusion
 
+# Data Acquisition
+Accelerometer and GPS data was collected using a Mobile Phone via Matlab Mobile App. Ultrasonic sensor data was collected via mounting an ultrasonic sensor with a sensing direction in x-axis through an Arduino Mega.
+The data for Accelerometer and GPS was collected using the mobile phone sensors and was collected while holding the mobile still and moving in a straight line for 45 meters at a constant velocity as shown in the figure below. The blocks are the obstacles at a known distance and the Ultrasonic sensor gives a reading when the mobile phone came close to the obstacle.
 
 
 # Kalman Filter
-The data for Accelerometer and GPS was collected using the mobile phone sensors and was collected while holding the mobile still and moving in a straight line for 45 meters at a constant velocity. Although the expected path is a straight line and expected velocity is constant but there is always some disturbances and therefore the actual path is approximated using the Kalman filter.\
+Although the expected path is a straight line and expected velocity is constant but there is always some disturbances and therefore the actual path is approximated using the Kalman filter.\
 The file 'Kalman_filter.m' is the main file and contains all the code required to run the filter to predict states. It has few functions dependencies including
 1. Accelero_to_position.m (required to process raw data from accelerometer).
 2. Gps_to_bodyframe.m (Required to convert the GPS data which is in global coordinate frame to the local accelerometer body frame) 
