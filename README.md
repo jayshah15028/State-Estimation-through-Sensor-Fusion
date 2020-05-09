@@ -3,7 +3,9 @@
 # Data Acquisition
 Accelerometer and GPS data was collected using a Mobile Phone via Matlab Mobile App. Ultrasonic sensor data was collected via mounting an ultrasonic sensor with a sensing direction in x-axis through an Arduino Mega.
 The data for Accelerometer and GPS was collected using the mobile phone sensors and was collected while holding the mobile still and moving in a straight line for 45 meters at a constant velocity as shown in the figure below. The blocks are the obstacles at a known distance and the Ultrasonic sensor gives a reading when the mobile phone came close to the obstacle.
+![](Data/path.jpg)
 
+Model fitting was done befor implementing any of the filters to compensate for the noise, scale and offset of the raw sensor data.
 
 # Kalman Filter
 Although the expected path is a straight line and expected velocity is constant but there is always some disturbances and therefore the actual path is approximated using the Kalman filter.\
